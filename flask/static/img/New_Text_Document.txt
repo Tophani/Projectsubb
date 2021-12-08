@@ -1,0 +1,32 @@
+import 'dart:io';
+voidmain(){
+
+stdout.write ("how many courses are you offering");
+String? course = stdin.readLineSync();
+int count =int.parse(course!);
+
+int num = 0;
+
+while (count > 0) {
+  stdout.write('Enter Value');
+
+String? count = stdin.readLineSync();
+  int value = int.parse(count!);
+
+  if (value >39){
+    stdout.write('course${count}');
+}
+else if (value > 44){
+      stdout.write("course${count} = P");
+} else  if (value > 59){
+        stdout.write("course${count} = C");
+} else if(value > 69){
+          stdout.write("course${count} = B");
+}else if(value >100){
+          stdout.write("course${count} = A");
+
+}
+
+      }
+    }
+

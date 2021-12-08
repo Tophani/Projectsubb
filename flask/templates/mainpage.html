@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <style>
+        body{
+            background-image: url('/static/img/blurred.jpg');
+            justify-content: center;
+            background-size: auto;
+            /* opacity: %; */
+        }
+        body h2{
+            color: white;
+        }
+        body h1 p{
+            color: wheat;
+            font-size: small;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    {% if user.type == "student" %}
+        <h2>Welcome {{name}}!!</h2>
+        {% for bs in book %}
+            <h1>{{bs.Book}} : {{bs.Author}}</h1><hr>
+            <p>{{ bs.View }}</p>
+            <br>
+            <a href="{{bs.location}}">open</a>
+        {% endfor %}
+    {% elif user.type == "admin" %}
+        <h2>Welcome Admin! {{name}}</h2>
+        <p>{{msg}}</p>
+        <form action="/home/{{user.name}}" method="post" enctype="multipart/form-data">
+            <input type="text" name="bkname" placeholder="BOOK NAME" id=""><br>
+            <!-- <input type="text" name="genre" id=""> -->
+            <input type="text" name="author" placeholder="AUTHOR" id=""><br>
+            <textarea name="view" placeholder="DESCRIPTION" id="" cols="30" rows="10"></textarea><br>
+            <input type="file" name="file" id=""><br>
+            <input type="hidden" name="user" value="admin">
+            <input type="submit" value="submit">
+        </form>
+    {% endif%}
+</body>
+</html>

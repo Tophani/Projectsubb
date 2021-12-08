@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>Welcome!!</h1>
+    <div class="login">
+    <div class="formcon">
+        <h2>Login</h2>
+        <form action="/" method="POST">
+        
+            <input type ="text" name="name" placeholder="Name">
+            <br>
+            
+            <!-- <input type="text" name="address" placeholder="Address"> -->
+            <br>
+            <input type="email" name="email" placeholder="Email">
+            <br>
+            <input type="tel" name="phone_no" placeholder="Phone_no">
+            <br>
+            <input type="hidden" name="moth" value="login">
+            <input type="submit" >
+    
+            </form>
+    </div>
+
+
+    </br>
+
+<div class="formcon">
+    <h2>Register</h2>
+    <form class="reg" action="/" method="POST">
+        
+        <input type ="text" name="name" placeholder="Name">
+        <br>
+        <input type="text" name="address" placeholder="Address">
+        <br>
+        <input type="email" name="email" placeholder="Email">
+        <br>
+        <input type="tel" name="phone_no" placeholder="Phone_no">
+        <br>
+        <input type="number" name ="age" placeholder ="Age">
+        <br>
+        <input type ="password" name="password" placeholder="Password">
+        <br>
+        <!-- <input type="hidden" name="student" value="student"> -->
+        <input type="hidden" name="moth" value="register">
+        <input type="submit" >
+
+    </form>
+</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: black; */
+    background-image: url('/static/img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+body h1{
+    color:whitesmoke;
+    font-size: 55px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+}
+body h2{
+    color: whitesmoke;
+    font-size: 30px;
+    /* padding-left: 20px; */
+    /* padding-bottom: 170px; */
+}
+body p{
+    color:white;
+    font-size: 25px;
+}
+body h2 p{
+    font-size: 40px;
+}
+
+
+.login {
+    display: flex;
+    
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 65%;
+    font-size: 30px;
+    /* background: brown; */
+    /* padding: 20px; */
+}
+
+form {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.formcon {
+    width: 50%;
+    height: 100%;
+    padding: 0.5em;
+    /* color: wheat; */
+}
+
+input {
+    padding: 1em;
+    
+}
+
+.reg {
+    height: 85%;
+    overflow-y: scroll;
+    padding-right: 0.5em;
+}
+
+.admin{
+    background-image: url('/static/img/admin2.jpg');
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    /* height: 100px; */
+    /* width: 200px; */
+
+
+} 
+
+input {
+    background-color: floralwhite;
+    
+}
+textarea{
+    background-color: floralwhite;
+}
